@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Addition Program</title>
+</head>
+
+<body>
+    <script>
+        function addNumbers() {
+            let number1 = parseInt(document.getElementById("number1").value);
+            let number2 = parseInt(document.getElementById("number2").value);
+            var sum = number1 + number2;
+            document.getElementById("sum").value = sum;
+            alert("The sum of " + number1 + " and " + number2 + " is: " + sum);
+            }     
+    </script>
+ 
+</body> 
+
+<label for="number1">Masukan Bilangan 1</label><br>
+<input type="number" id="number1" id=""/><br>
+<label for="number2">Masukan Bilangan 2</label><br>
+<input type="number" id="number2"/><br>
+<button type="button" onclick="addNumbers()">Submit</button>
+<input type="number" id="sum"/><br>
+
+
+
+</html>

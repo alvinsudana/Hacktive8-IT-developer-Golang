@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Login Page
+    </title>
+</head>
+
+<body> 
+    <h1>
+        <center>LOGIN PAGE</center>
+    </h1>
+    <label for="username">Masukan Username</label><br>
+    <input type="text" id="username"/><br>
+    <label for="password">Masukan Password</label><br>
+    <input type="password" id="password"/><br><br><br>
+    <button type="button" onclick="login()">Login</button>
+    <script>
+        function login() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            if (username =="admin@co" && password =="password")
+            {
+                window.location.assign('../Day 1/latihanHTMLwithCSS.html');
+            }
+            else{
+                alert("login gagal");
+                window.location.assign('latihanlogin.html');
+            }
+            
+            }     
+    </script>
+</body>
+
+</html>
