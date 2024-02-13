@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "58814685-cd26-4a2a-b997-1a1d5bf9dcdd",
+		"name": "jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32799785",
+		"_collection_link": "https://www.postman.com/alvinsudana/workspace/alvinbsudana/collection/32799785-58814685-cd26-4a2a-b997-1a1d5bf9dcdd?action=share&source=collection_link&creator=32799785"
+	},
+	"item": [
+		{
+			"name": "regis",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"alvin.sudana@gmail.com\",\r\n    \"password\" : \"123456\",\r\n    \"full_name\" : \"Alvin B S\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"alvin.sudana@gmail.com\",\r\n    \"password\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsdmluLnN1ZGFuYUBnbWFpbC5jb20iLCJpZCI6MX0.Z7n7fnoRnqYcqP_rHy3VWPlUeU_RstXnIC9djcUogk0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "bantal",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "keren banget kakak",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsdmluLnN1ZGFuYUBnbWFpbC5jb20iLCJpZCI6MX0.Z7n7fnoRnqYcqP_rHy3VWPlUeU_RstXnIC9djcUogk0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "updatedtitle",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "updated description",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/products/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
